@@ -1815,10 +1815,10 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@zsobecki_futurum/react-draggable@^4.5.4":
-  version "4.5.4"
-  resolved "https://registry.yarnpkg.com/@zsobecki_futurum/react-draggable/-/react-draggable-4.5.4.tgz#d6f4a46bfb52f57dab6cb90f8d07676ef2dd28bf"
-  integrity sha512-B4EmeVp1g5D4EKXMQtk8vFcdTwNQ1CryGrNsIbacXFP5VNHXiyxPFcb7zwjGGpsvWHqEAdmiohpKYLUoQSEQeQ==
+"@zsobecki_futurum/react-draggable@^4.5.5":
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/@zsobecki_futurum/react-draggable/-/react-draggable-4.5.5.tgz#7889b8f8224d6742eee66192f618fa181ab5280c"
+  integrity sha512-2ziKL6RAlWI5Ll8Y6P84uT2PliG1wCkBryiv38yvVkwIaZbUl/Bu2VVbblEuX1rbczlgsvZOE6ARnRKAYZ7K+w==
   dependencies:
     clsx "^2.1.1"
     prop-types "^15.8.1"
@@ -6049,14 +6049,6 @@ react-draggable@^4.0.3:
   integrity sha512-LtY5Xw1zTPqHkVmtM3X8MUOxNDOUhv/khTgBgrUvwaS064bwVvxT+q5El0uUFNx5IEPKXuRejr7UqLwBIg5pdw==
   dependencies:
     clsx "^1.1.1"
-    prop-types "^15.8.1"
-
-react-draggable@^4.4.6:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/react-draggable/-/react-draggable-4.5.0.tgz#0b274ccb6965fcf97ed38fcf7e3cc223bc48cdf5"
-  integrity sha512-VC+HBLEZ0XJxnOxVAZsdRi8rD04Iz3SiiKOoYzamjylUcju/hP9np/aZdLHf/7WOD268WMoNJMvYfB5yAK45cw==
-  dependencies:
-    clsx "^2.1.1"
     prop-types "^15.8.1"
 
 react-hot-loader@^4.13.1:

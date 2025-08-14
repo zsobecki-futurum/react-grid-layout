@@ -48,11 +48,10 @@
   },
   "homepage": "https://github.com/zsobecki-futurum/react-grid-layout",
   "dependencies": {
-    "@zsobecki_futurum/react-draggable": "^4.5.4",
+    "@zsobecki_futurum/react-draggable": "^4.5.5",
     "clsx": "^2.1.1",
     "fast-equals": "^4.0.3",
     "prop-types": "^15.8.1",
-    "react-draggable": "^4.4.6",
     "react-resizable": "^3.0.5",
     "resize-observer-polyfill": "^1.5.1"
   },
