@@ -308,7 +308,12 @@ declare namespace ReactGridLayout {
      * Delay in ms before a drag starts on mobile devices.
      * This is useful to prevent accidental drags on touch devices.
      */
-    mobileHoldDelay?: number | undefined;
+    mobileDragDelay?: number | undefined;
+    /**
+     * If true, allows scrolling on mobile devices while dragging.
+     * This is useful to prevent accidental drags on touch devices.
+     */
+    allowMobileScroll?: boolean | undefined;
   }
 
   interface ReactGridLayoutProps extends CoreProps {

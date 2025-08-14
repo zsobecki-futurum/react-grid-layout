@@ -674,7 +674,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
         resizeHandles={resizeHandlesOptions}
         resizeHandle={resizeHandle}
         allowMobileScroll={allowMobileScroll}
-        mobileHoldDelay={mobileDragDelay}
+        mobileDragDelay={mobileDragDelay}
       >
         {child}
       </GridItem>

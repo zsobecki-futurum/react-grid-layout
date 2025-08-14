@@ -81,7 +81,7 @@ type Props = {
   transformScale: number,
   droppingPosition?: DroppingPosition,
   allowMobileScroll: boolean,
-  mobileHoldDelay: number,
+  mobileDragDelay: number,
 
   className: string,
   style?: Object,
@@ -120,7 +120,7 @@ type DefaultProps = {
   maxH: number,
   maxW: number,
   transformScale: number,
-  mobileHoldDelay: number
+  mobileDragDelay: number
 };
 
 /**
@@ -212,7 +212,7 @@ export default class GridItem extends React.Component<Props, State> {
       top: PropTypes.number.isRequired
     }),
     // Delay for mobile drag events
-    mobileHoldDelay: PropTypes.number,
+    mobileDragDelay: PropTypes.number,
 
     // Whether to allow mobile scroll events
     allowMobileScroll: PropTypes.bool.isRequired
@@ -227,7 +227,7 @@ export default class GridItem extends React.Component<Props, State> {
     maxH: Infinity,
     maxW: Infinity,
     transformScale: 1,
-    mobileHoldDelay: 250
+    mobileDragDelay: 250
   };
 
   state: State = {
@@ -380,7 +380,7 @@ export default class GridItem extends React.Component<Props, State> {
         scale={this.props.transformScale}
         nodeRef={this.elementRef}
         allowMobileScroll={this.props.allowMobileScroll}
-        mobileHoldDelay={this.props.mobileHoldDelay}
+        mobileDragDelay={this.props.mobileDragDelay}
       >
         {child}
       </DraggableCore>

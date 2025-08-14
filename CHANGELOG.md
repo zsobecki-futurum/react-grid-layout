@@ -1,8 +1,8 @@
 # Changelog
 
-## 1.5.4 (Aug 15, 2025)
+## 1.6.0 (Aug 15, 2025)
 
--Added `mobileHoldDelay` prop to `<GridItem>` to prevent accidental drags on mobile devices.
+-Added `mobileDragDelay` prop to `<GridItem>` to prevent accidental drags on mobile devices.
 
 ## 1.5.2 (Jun 25, 2025)
 
