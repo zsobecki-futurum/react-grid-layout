@@ -81,7 +81,7 @@ type Props = {
   transformScale: number,
   droppingPosition?: DroppingPosition,
   allowMobileScroll: boolean,
-  mobileDragDelay: number,
+  mobileDragDelay?: number,
 
   className: string,
   style?: Object,
@@ -119,8 +119,7 @@ type DefaultProps = {
   minW: number,
   maxH: number,
   maxW: number,
-  transformScale: number,
-  mobileDragDelay: number
+  transformScale: number
 };
 
 /**
@@ -226,8 +225,7 @@ export default class GridItem extends React.Component<Props, State> {
     minW: 1,
     maxH: Infinity,
     maxW: Infinity,
-    transformScale: 1,
-    mobileDragDelay: 250
+    transformScale: 1
   };
 
   state: State = {
@@ -290,8 +288,9 @@ export default class GridItem extends React.Component<Props, State> {
     const { dragging } = this.state;
 
     const shouldDrag =
-      (dragging && droppingPosition.left !== prevDroppingPosition.left) ||
-      droppingPosition.top !== prevDroppingPosition.top;
+      dragging &&
+      (droppingPosition.left !== prevDroppingPosition.left ||
+        droppingPosition.top !== prevDroppingPosition.top);
 
     if (!dragging) {
       this.onDragStart(droppingPosition.e, {
