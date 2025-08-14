@@ -102,6 +102,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
     verticalCompact: true,
     compactType: "vertical",
     preventCollision: false,
+    allowMobileScroll: false,
     droppingItem: {
       i: "__dropping-elem__",
       h: 1,
@@ -268,7 +269,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
       activeDrag: placeholder
     });
 
-    return this.props.onDragStart(layout, l, l, null, e, node);
+    return this.props.onDragStart(layout, l, l, placeholder, e, node);
   };
 
   /**
@@ -555,7 +556,8 @@ export default class ReactGridLayout extends React.Component<Props, State> {
       rowHeight,
       maxRows,
       useCSSTransforms,
-      transformScale
+      transformScale,
+      allowMobileScroll
     } = this.props;
 
     // {...this.state.activeDrag} is pretty slow, actually
@@ -580,6 +582,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
         isBounded={false}
         useCSSTransforms={useCSSTransforms}
         transformScale={transformScale}
+        allowMobileScroll={allowMobileScroll}
       >
         <div />
       </GridItem>
@@ -613,7 +616,9 @@ export default class ReactGridLayout extends React.Component<Props, State> {
       draggableCancel,
       draggableHandle,
       resizeHandles,
-      resizeHandle
+      resizeHandle,
+      allowMobileScroll,
+      mobileDragDelay
     } = this.props;
     const { mounted, droppingPosition } = this.state;
 
@@ -668,6 +673,8 @@ export default class ReactGridLayout extends React.Component<Props, State> {
         droppingPosition={isDroppingItem ? droppingPosition : undefined}
         resizeHandles={resizeHandlesOptions}
         resizeHandle={resizeHandle}
+        allowMobileScroll={allowMobileScroll}
+        mobileHoldDelay={mobileDragDelay}
       >
         {child}
       </GridItem>

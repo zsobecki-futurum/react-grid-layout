@@ -86,6 +86,7 @@ describe("Lifecycle tests", function () {
       isDraggable: false,
       isResizable: false,
       isBounded: false,
+      allowMobileScroll: false,
       useCSSTransforms: false
     };
     it("Basic Render", () => {
