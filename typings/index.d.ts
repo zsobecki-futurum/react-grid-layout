@@ -303,6 +303,12 @@ declare namespace ReactGridLayout {
      * You can use this instead of a regular ref and the deprecated `ReactDOM.findDOMNode()`` function.
      */
     innerRef?: React.Ref<HTMLDivElement>;
+
+    /**
+     * Delay in ms before a drag starts on mobile devices.
+     * This is useful to prevent accidental drags on touch devices.
+     */
+    mobileHoldDelay?: number | undefined;
   }
 
   interface ReactGridLayoutProps extends CoreProps {
