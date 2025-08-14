@@ -5,6 +5,7 @@ DIST = ./dist
 BUILD = ./build
 LIB = ./lib
 TEST = ./test
+TYPINGS = ./typings
 EXAMPLES = ./examples/*.{js,html}
 MIN = $(DIST)/react-grid-layout.min.js
 MIN_MAP = $(DIST)/react-grid-layout.min.js.map
