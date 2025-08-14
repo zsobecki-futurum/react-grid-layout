@@ -1,7 +1,7 @@
 {
-  "name": "react-grid-layout",
-  "version": "1.5.2",
-  "description": "A draggable and resizable grid layout with responsive breakpoints, for React.",
+  "name": "@zsobecki_futurum/react-grid-layout",
+  "version": "1.5.3",
+  "description": "A draggable and resizable grid layout with responsive breakpoints, for React. Improved with mobile hold delay.",
   "main": "index.js",
   "scripts": {
     "lint": "make lint",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:STRML/react-grid-layout.git"
+    "url": "git@github.com:zsobecki-futurum/react-grid-layout.git"
   },
   "keywords": [
     "react",
@@ -33,10 +33,11 @@
   "author": "Samuel Reed <samuel.trace.reed@gmail.com> (http://strml.net/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/STRML/react-grid-layout/issues"
+    "url": "https://github.com/zsobecki-futurum/react-grid-layout/issues"
   },
-  "homepage": "https://github.com/STRML/react-grid-layout",
+  "homepage": "https://github.com/zsobecki-futurum/react-grid-layout",
   "dependencies": {
+    "@zsobecki_futurum/react-draggable": "^4.5.2",
     "clsx": "^2.1.1",
     "fast-equals": "^4.0.3",
     "prop-types": "^15.8.1",

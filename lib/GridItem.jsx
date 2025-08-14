@@ -2,7 +2,7 @@
 import React from "react";
 import { flushSync } from "react-dom";
 import PropTypes from "prop-types";
-import { DraggableCore } from "react-draggable";
+import { DraggableCore } from "@zsobecki_futurum/react-draggable";
 import { Resizable } from "react-resizable";
 import {
   fastPositionEqual,
@@ -80,6 +80,7 @@ type Props = {
   usePercentages?: boolean,
   transformScale: number,
   droppingPosition?: DroppingPosition,
+  mobileHoldDelay?: number,
 
   className: string,
   style?: Object,
@@ -207,7 +208,9 @@ export default class GridItem extends React.Component<Props, State> {
       e: PropTypes.object.isRequired,
       left: PropTypes.number.isRequired,
       top: PropTypes.number.isRequired
-    })
+    }),
+    // Delay for mobile drag events
+    mobileHoldDelay: PropTypes.number
   };
 
   static defaultProps: DefaultProps = {
@@ -218,7 +221,8 @@ export default class GridItem extends React.Component<Props, State> {
     minW: 1,
     maxH: Infinity,
     maxW: Infinity,
-    transformScale: 1
+    transformScale: 1,
+    mobileHoldDelay: 0
   };
 
   state: State = {
@@ -370,6 +374,7 @@ export default class GridItem extends React.Component<Props, State> {
         }
         scale={this.props.transformScale}
         nodeRef={this.elementRef}
+        mobileHoldDelay={this.props.mobileHoldDelay}
       >
         {child}
       </DraggableCore>
