@@ -1,6 +1,6 @@
 {
   "name": "@zsobecki_futurum/react-grid-layout",
-  "version": "1.5.7",
+  "version": "1.5.8",
   "description": "A draggable and resizable grid layout with responsive breakpoints, for React. Improved with mobile hold delay.",
   "main": "index.js",
   "types": "typings/index.d.ts",
@@ -48,7 +48,7 @@
   },
   "homepage": "https://github.com/zsobecki-futurum/react-grid-layout",
   "dependencies": {
-    "@zsobecki_futurum/react-draggable": "^4.5.3",
+    "@zsobecki_futurum/react-draggable": "^4.5.4",
     "clsx": "^2.1.1",
     "fast-equals": "^4.0.3",
     "prop-types": "^15.8.1",
