@@ -331,9 +331,11 @@ droppingItem?: { i: string, w: number, h: number }
 isDraggable: ?boolean = true,
 isResizable: ?boolean = true,
 isBounded: ?boolean = false,
+
 // Uses CSS3 translate() instead of position top/left.
 // This makes about 6x faster paint performance
 useCSSTransforms: ?boolean = true,
+
 // If parent DOM node of ResponsiveReactGridLayout or ReactGridLayout has "transform: scale(n)" css property,
 // we should set scale coefficient to avoid render artefacts while dragging.
 transformScale: ?number = 1,
@@ -358,6 +360,7 @@ preventCollision: ?boolean = false,
 // onDragStart attribute is required for Firefox for a dragging initialization
 // @see https://bugzilla.mozilla.org/show_bug.cgi?id=568313
 isDroppable: ?boolean = false,
+
 // Defines which resize handles should be rendered.
 // Allows for any combination of:
 // 's' - South handle (bottom-center)
@@ -371,6 +374,7 @@ isDroppable: ?boolean = false,
 //
 // Note that changing this property dynamically does not work due to a restriction in react-resizable.
 resizeHandles: ?Array<'s' | 'w' | 'e' | 'n' | 'sw' | 'nw' | 'se' | 'ne'> = ['se'],
+
 // Custom component for resize handles
 // See `handle` as used in https://github.com/react-grid-layout/react-resizable#resize-handle
 // Your component should have the class `.react-resizable-handle`, or you should add your custom
@@ -411,6 +415,7 @@ onResizeStop: ItemCallback,
 
 // Calls when an element has been dropped into the grid from outside.
 onDrop: (layout: Layout, item: ?LayoutItem, e: Event) => void,
+
 // Calls when an element is being dragged over the grid from outside as above.
 // This callback should return an object to dynamically change the droppingItem size
 // Return false to short-circuit the dragover
@@ -421,6 +426,16 @@ onDropDragOver: (e: DragOverEvent) => ?({|w?: number, h?: number|} | false),
 // Note that this type is React.Ref<HTMLDivElement> in TypeScript, Flow has a bug here
 // https://github.com/facebook/flow/issues/8671#issuecomment-862634865
 innerRef: {current: null | HTMLDivElement},
+
+// Delay in ms before a drag starts on mobile devices.
+// This is useful to prevent accidental drags on touch devices.
+// allowMobileScroll is required to be true for this to work.
+mobileDragDelay?: number,
+
+// Turns off cancellation of the 'touchstart' event on mobile devices.
+// Enable this if you are having trouble with click events or want to use 'mobileDragDelay'.
+// Prefer using 'handle' / 'cancel' instead.
+allowMobileScroll: ?boolean = false,
 ```
 
 ### Responsive Grid Layout Props
